@@ -1,0 +1,19 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB Queries\r All users whose gender is male\r db.users.find({gender:'Male'})\r All users whose ID is even\r db.users.find({id:{$mod:[2,0]}})\r Users who currently live in Japan\r db.users.find({native:'Japan'})\r Users who are female and live in India\r db.users.find({native:'India',gender:'Female'})\r Users who are more than 25 years old\r db.users.find({age:{$gt:25}})\r Users who are less than 50 years old and live in United State\r db.users.find({native:'United States',age:{$lt:50}})\r Total number of users who want to relocate to France (count only)\r db.users.find({relocate_to:'France'}).count()\r Total number of users who are from USA and want to relocate to russia, sort them by age in ascending order\r  db.users.find({native:'United States',relocate_to:'Russia'}).sort({age:1})\r get all users, sort them by total number of family member ASC and age DESC order\r db.users.find().sort({family_members: 1,age:-1})",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon scr"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
